@@ -1,41 +1,39 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
+# Go defaults (from github/gitignore Go template)
+# Binaries
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
 
-# Test binary, built with `go test -c`
+# Test binary
 *.test
 
-# Code coverage profiles and other test artifacts
+# Coverage / test artifacts
 *.out
 coverage.*
 *.coverprofile
 profile.cov
 
-# Dependency directories (remove the comment below to include it)
+# Dependencies (uncomment to include)
 # vendor/
 
-# Go workspace file
+# Go workspace
 go.work
 go.work.sum
 
-# env file
+# Env file
 .env
 
-# Editor/IDE
+# Editor / IDE
 # .idea/
-# .vscode/
+.vscode/
 .DS_Store
 
-# --- zebracode 运行时产物（本地/用户数据，切勿提交） ---
-# 警告：config.yaml 含 API key 等密钥；file-history/memory/sessions 含被编辑文件快照、
-# 对话全文与自动提取的私密信息。当前仓库内这些文件部分已被 git 跟踪，需配合
-# `git rm --cached` 才能彻底停止跟踪（见下方说明）。
+# zebracode runtime data (local, do NOT commit)
+# config.yaml holds API keys; sessions/memory/file-history hold
+# conversations, file snapshots and private info. Some were already
+# tracked — run `git rm --cached <path>` to untrack.
 .zebracode/config.yaml
 .zebracode/permissions.local.yaml
 .zebracode/prompt_history.jsonl
@@ -45,13 +43,16 @@ go.work.sum
 .zebracode/tasks
 .zebracode/plans
 .zebracode/skills
-# 本地安装的 skill；如需保留某个 skill，改用 !.zebracode/skills/<name> 例外
+# To keep a specific local skill, add: !.zebracode/skills/<name>
 
-# 保留配置模板（已在仓库中，继续跟踪）
+# Keep the config template tracked
 !.zebracode/config.yaml.example
 
-# --- WorkBuddy 代理内部状态（含代理记忆与用户工作日志，含隐私，勿提交） ---
+# WorkBuddy internal state (private, do NOT commit)
 .workbuddy/
 
-# --- Go 构建产物（go build ./cmd/zebracode 在仓库根生成的二进制） ---
+# Go build artifact (binary at repo root)
 /zebracode
+
+# Local personal docs (not pushed, do NOT commit)
+docs/personal/
