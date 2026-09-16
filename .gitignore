@@ -30,3 +30,28 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+.DS_Store
+
+# --- zebracode 运行时产物（本地/用户数据，切勿提交） ---
+# 警告：config.yaml 含 API key 等密钥；file-history/memory/sessions 含被编辑文件快照、
+# 对话全文与自动提取的私密信息。当前仓库内这些文件部分已被 git 跟踪，需配合
+# `git rm --cached` 才能彻底停止跟踪（见下方说明）。
+.zebracode/config.yaml
+.zebracode/permissions.local.yaml
+.zebracode/prompt_history.jsonl
+.zebracode/sessions
+.zebracode/file-history
+.zebracode/memory
+.zebracode/tasks
+.zebracode/plans
+.zebracode/skills
+# 本地安装的 skill；如需保留某个 skill，改用 !.zebracode/skills/<name> 例外
+
+# 保留配置模板（已在仓库中，继续跟踪）
+!.zebracode/config.yaml.example
+
+# --- WorkBuddy 代理内部状态（含代理记忆与用户工作日志，含隐私，勿提交） ---
+.workbuddy/
+
+# --- Go 构建产物（go build ./cmd/zebracode 在仓库根生成的二进制） ---
+/zebracode
