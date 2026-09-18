@@ -52,7 +52,7 @@ func TestBuildExtractAutoOnlyPromptIncludesExistingManifest(t *testing.T) {
 func TestBuildExtractAutoOnlyPromptNoTeamSection(t *testing.T) {
 	// Dual-path mode uses <scope> tags for user-level / project-level routing, but the
 	// "team memory" / "private or team" guidance must never appear in the auto-only
-	// prompt — Zebracode keeps the user/project split simple, no team memory concept.
+	// prompt — Zebra Code keeps the user/project split simple, no team memory concept.
 	got := BuildExtractAutoOnlyPrompt(3, "", false, "/home/test/.zebracode/memory/", "/tmp/proj/.zebracode/memory/")
 	for _, banned := range []string{
 		"team memor",

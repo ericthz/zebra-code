@@ -296,6 +296,7 @@ func emitJSON(v any) {
 func loadPrintInstructions(wd string) string {
 	paths := []string{
 		filepath.Join(wd, ".zebracode", "instructions.md"),
+		filepath.Join(wd, "AGENTS.md"),
 		filepath.Join(wd, "ZEBRACODE.md"),
 	}
 	var parts []string

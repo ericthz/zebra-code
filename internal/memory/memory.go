@@ -11,7 +11,7 @@ import (
 
 // Manager wraps the dual auto-memory directories (user-level + project-level).
 // It is a thin coordinator: the actual save/load happens via the agent's
-// Write/Read tools (per Zebracode's reference architecture). This struct exists
+// Write/Read tools (per Zebra Code's reference architecture). This struct exists
 // to give the TUI a stable handle for system-prompt building and for the
 // `/memory` slash command (list / clear).
 type Manager struct {

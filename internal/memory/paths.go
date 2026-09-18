@@ -16,7 +16,7 @@ const AutoMemEntrypointName = "MEMORY.md"
 // sandbox `HasPrefix` checks) work correctly without falsely matching
 // `…/memoryxyz`.
 //
-// Zebracode colocates memory with other project-local state under .zebracode/
+// Zebra Code colocates memory with other project-local state under .zebracode/
 // so records show up in the IDE and editors can open them directly.
 //
 // Resolution order:

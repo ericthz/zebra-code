@@ -15,7 +15,7 @@ import (
 // 所以落盘的是另一份纯元信息的结构。两边靠成员名字对应。
 //
 // 这份文件解决的是跨进程和跨重启：窗格队员是独立进程，起来之后要知道自己在哪个团队、
-// 队友都有谁；用户重启 Zebracode 之后也得能接着用之前的团队。
+// 队友都有谁；用户重启 Zebra Code 之后也得能接着用之前的团队。
 type TeamFile struct {
 	Name        string           `json:"name"`
 	Description string           `json:"description,omitempty"`

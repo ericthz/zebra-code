@@ -135,7 +135,7 @@ func TestTaskStopOnIdleTeammate(t *testing.T) {
 	}
 }
 
-// Zebracode 的内建类型是 general-purpose / plan / explore，没有 worker
+// Zebra Code 的内建类型是 general-purpose / plan / explore，没有 worker
 func TestCoordinatorPromptUsesRealSubagentType(t *testing.T) {
 	p := prompt.CoordinatorReminder(1)
 	if strings.Contains(p, `subagent_type: "worker"`) || strings.Contains(p, "subagent_type `worker`") {

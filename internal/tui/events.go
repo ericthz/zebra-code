@@ -145,7 +145,7 @@ func (m Model) handleAgentEvent(ev agent.AgentEvent) (tea.Model, tea.Cmd) {
 			}
 		}
 		if emitted != nil {
-			// Flush pending assistant text first so order matches Zebracode's
+			// Flush pending assistant text first so order matches Zebra Code's
 			// per-block stream: text → tool result → text → tool result.
 			if m.streamBuf != "" {
 				m.chatMessages = append(m.chatMessages, chatMessage{

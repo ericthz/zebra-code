@@ -14,7 +14,7 @@ import (
 	"github.com/ericthz/zebra-code/internal/memory"
 )
 
-// Tool names used in the extraction prompt. Match Zebracode's tool registry (capitalized, no
+// Tool names used in the extraction prompt. Match Zebra Code's tool registry (capitalized, no
 // underscores) — these strings are baked into prompts so the model issues calls that the registry
 // recognizes.
 const (

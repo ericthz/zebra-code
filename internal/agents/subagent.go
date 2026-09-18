@@ -204,7 +204,7 @@ type SubAgentSpec struct {
 	// InitialPrompt is prepended to the first user turn.
 	InitialPrompt string
 
-	// OmitZMd drops the ZEBRACODE.md hierarchy from this agent's userContext.
+	// OmitZMd drops the project instruction hierarchy (AGENTS.md) from this agent's userContext.
 	OmitZMd bool
 
 	// Skills are skill names to preload when the sub-agent starts.

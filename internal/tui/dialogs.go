@@ -174,7 +174,7 @@ func (m Model) renderPlanApprovalDialog() string {
 	var sb strings.Builder
 
 	header := lipgloss.NewStyle().Foreground(brandPurple).Bold(true).Render(
-		" Zebracode has written up a plan and is ready to execute. Would you like to proceed?",
+		" Zebra Code has written up a plan and is ready to execute. Would you like to proceed?",
 	)
 	sb.WriteString(header)
 	sb.WriteString("\n\n")
@@ -182,7 +182,7 @@ func (m Model) renderPlanApprovalDialog() string {
 	options := []string{
 		"Yes, enter YOLO mode (auto-approve all)",
 		"Yes, manually approve edits",
-		"Tell Zebracode what to change",
+		"Tell Zebra Code what to change",
 	}
 
 	for i, opt := range options {

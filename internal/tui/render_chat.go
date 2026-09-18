@@ -167,7 +167,7 @@ func (m Model) renderChatView() string {
 }
 
 func (m Model) renderBanner() string {
-	cat := bannerDimStyle.Render("Zebracode v0.1.0") + "\n" +
+	cat := bannerDimStyle.Render("Zebra Code v0.1.0") + "\n" +
 		bannerDimStyle.Render(m.getModelName()) + "\n" +
 		bannerDimStyle.Render(m.getWorkDir())
 	return cat

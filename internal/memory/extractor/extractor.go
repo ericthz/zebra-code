@@ -52,7 +52,7 @@ type Deps struct {
 // Translated from the TS initExtractMemories closure. Mapping:
 // inFlightExtractions Set → inFlight map[*sync.WaitGroup]struct{}
 // lastMemoryMessageUuid string|undefined → lastMemoryMessageIdx int
-// (Zebracode messages have no uuid; cursor is the parent conversation's
+// (Zebra Code messages have no uuid; cursor is the parent conversation's
 // message-array index at the time the last successful extraction ran)
 // hasLoggedGateFailure / inProgress / turnsSinceLastExtraction → bool/int
 // pendingContext → *pendingExtractionCtx
@@ -131,7 +131,7 @@ func (e *Extractor) runExtraction(ctx context.Context, isTrailingRun bool) error
 		return nil
 	}
 
-	// Throttle: default is 1 (run every turn). Zebracode hardcodes 1; trailing runs bypass the throttle
+	// Throttle: default is 1 (run every turn). Zebra Code hardcodes 1; trailing runs bypass the throttle
 	// since they process already-committed work.
 	if !isTrailingRun {
 		e.turnsSinceLastExtraction++

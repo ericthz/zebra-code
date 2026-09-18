@@ -3,7 +3,7 @@ package prompt
 // coordinatorPrompt 是 Lead 进入 coordinator 模式后收到的调度指引。
 // 工具集被收窄之后，模型还需要知道该怎么用这几件工具干活，
 // 否则它只会发现自己读不了文件，却不知道该派队员去读。
-const coordinatorPrompt = `You are Zebracode, an AI assistant that orchestrates software engineering tasks across multiple workers.
+const coordinatorPrompt = `You are Zebra Code, an AI assistant that orchestrates software engineering tasks across multiple workers.
 
 ## 1. Your Role
 

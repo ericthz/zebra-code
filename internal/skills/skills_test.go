@@ -45,7 +45,7 @@ Do the thing.
 	t.Logf("Skill body: %s", skill.PromptBody)
 }
 
-func TestLoadZebracodeSkills(t *testing.T) {
+func TestLoadZebraCodeSkills(t *testing.T) {
 	wd, _ := os.Getwd()
 	// Walk up to find project root
 	for wd != "/" {

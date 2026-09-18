@@ -1,4 +1,4 @@
-// Package compact implements Zebracode's Layer 2 context management:
+// Package compact implements Zebra Code's Layer 2 context management:
 // an LLM-driven full-conversation summary, gated by token ratio (default
 // >80% of context window). Replaces the entire conversation with a summary
 // message + a continuation acknowledgement. Also reachable via ForceCompact

@@ -17,18 +17,18 @@ type RelevantMemory struct {
 // SelectorFn is the abstraction for the side-query LLM call used by the recall selector. Given a
 // system prompt and a user message, the caller is expected to issue a one-shot model call and
 // return the raw assistant text. Errors are treated as "selector failed → no recall" by
-// FindRelevantMemories. Zebracode's llm.Client is a streaming + system-prompt-bound interface, so
+// FindRelevantMemories. Zebra Code's llm.Client is a streaming + system-prompt-bound interface, so
 // this callback lets the caller stand up a dedicated side-query client without coupling memory →
 // llm at the package level.
 type SelectorFn func(ctx context.Context, systemPrompt, userMessage string) (string, error)
 
 // SelectMemoriesSystemPrompt is the system prompt for the selector agent. Client.
-const SelectMemoriesSystemPrompt = `You are selecting memories that will be useful to Zebracode as it processes a user's query. You will be given the user's query and a list of available memory files with their filenames and descriptions.
+const SelectMemoriesSystemPrompt = `You are selecting memories that will be useful to Zebra Code as it processes a user's query. You will be given the user's query and a list of available memory files with their filenames and descriptions.
 
-Return a list of filenames for the memories that will clearly be useful to Zebracode as it processes the user's query (up to 5). Only include memories that you are certain will be helpful based on their name and description.
+Return a list of filenames for the memories that will clearly be useful to Zebra Code as it processes the user's query (up to 5). Only include memories that you are certain will be helpful based on their name and description.
 - If you are unsure if a memory will be useful in processing the user's query, then do not include it in your list. Be selective and discerning.
 - If there are no memories in the list that would clearly be useful, feel free to return an empty list.
-- If a list of recently-used tools is provided, do not select memories that are usage reference or API documentation for those tools (Zebracode is already exercising them). DO still select memories containing warnings, gotchas, or known issues about those tools — active use is exactly when those matter.
+- If a list of recently-used tools is provided, do not select memories that are usage reference or API documentation for those tools (Zebra Code is already exercising them). DO still select memories containing warnings, gotchas, or known issues about those tools — active use is exactly when those matter.
 
 Respond with valid JSON only, no markdown, in this exact shape: {"selected_memories": ["filename1.md", "filename2.md"]}`
 
@@ -116,7 +116,7 @@ func selectRelevantMemories(
 
 	manifest := FormatMemoryManifest(memories)
 
-	// When Zebracode is actively using a tool (e.g. mcp__X__spawn), surfacing that tool's reference docs
+	// When Zebra Code is actively using a tool (e.g. mcp__X__spawn), surfacing that tool's reference docs
 	// is noise — the conversation already contains working usage. The selector otherwise matches on
 	// keyword overlap ("spawn" in query + "spawn" in a memory description → false positive).
 	toolsSection := ""

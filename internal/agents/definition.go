@@ -73,7 +73,7 @@ type AgentDefinition struct {
 	// InitialPrompt is prepended to the first user turn (slash commands work).
 	InitialPrompt string `yaml:"initialPrompt"`
 
-	// OmitZMd drops the ZEBRACODE.md hierarchy from this agent's user context. Read-only agents
+	// OmitZMd drops the project instruction hierarchy (AGENTS.md) from this agent's user context. Read-only agents
 	// (Explore, Plan) save tokens by skipping it.
 	OmitZMd bool `yaml:"omitZMd"`
 

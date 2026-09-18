@@ -229,7 +229,7 @@ func CreateDefaultRegistry() *Registry {
 		Type:        TypeLocal,
 		Handler: func(ctx *Context) string {
 			var sb strings.Builder
-			sb.WriteString("Zebracode Status\n")
+			sb.WriteString("Zebra Code Status\n")
 			sb.WriteString("──────────────\n")
 			sb.WriteString(fmt.Sprintf("  Mode:      %s\n", ctx.PermissionMode()))
 			input, output := ctx.TokenCount()

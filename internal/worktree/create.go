@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 )
 
-// WorktreesDir is where all Zebracode-managed worktrees live: a single directory inside the repo root
+// WorktreesDir is where all Zebra Code-managed worktrees live: a single directory inside the repo root
 // that's already in .gitignore.
 func WorktreesDir(repoRoot string) string {
 	return filepath.Join(repoRoot, ".zebracode", "worktrees")
